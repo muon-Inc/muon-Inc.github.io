@@ -277,6 +277,10 @@ p {
     display: inline-block !important;
 }
 
+.media ul li a:hover{
+    color: #6adb90;
+}
+
 .loading-screen {
     position: absolute;
     width: 100%;
