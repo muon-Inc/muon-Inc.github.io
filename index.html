@@ -298,16 +298,23 @@
                     <img class="contact-gif" src="imgs/contact.svg" alt="">
                 </div>
                 <div class="form-wrapper">
-                    <form class="form">
-                        <h2>CONTACT US</h2>
+                    <h2>CONTACT US</h2>
+                    <div class="alert">Contact Successfull</div>
+                    <form class="form" name="gform" id="gform" enctype="text/plain"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSfXosuqVsHWaY58op-RdrBiEEs2RHVi05niMZLGCI5EnQFdjQ/formResponse?"
+                        target="hidden_iframe" onsubmit="submitted=true;">
                         <label for="">Name</label>
-                        <input placeholder="Write your name here"></input>
+                        <input type="text" id="entry.990708970" name="entry.990708970"
+                            placeholder="Write your name here" required></input>
                         <label for="">Email</label>
-                        <input placeholder="Let us know how to contact you"></input>
+                        <input type="email" id="entry.1583499107" name="entry.1583499107"
+                            placeholder="Let us know how to contact you" required></input>
                         <label for="">Message</label>
-                        <input placeholder="What would you like to tell us"></input>
-                        <!-- <div class="button button-2">Angle bg</div> -->
-                        <button class="button button-2">Send</button>
+                        <input id="entry.908540402" name="entry.908540402"
+                            placeholder="What would you like to tell us"></input>
+                        <button type="submit" class="button button-2">Send</button>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                            onload="if(submitted) {}"></iframe>
                     </form>
                 </div>
             </div>
