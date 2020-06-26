@@ -26,6 +26,17 @@ $(document).ready(function () {
             scrollTop: 0
         }, 2000);
     });
+    
+        $('#gform').on('submit', function (e) {
+
+        //Show Alert
+        document.querySelector('.alert').style.display = "block";
+        //Hide alert after 4 sec
+        setTimeout(function () {
+            document.querySelector('.alert').style.display = "none";
+        }, 4000);
+
+    });
 
     AOS.init({
         easing: 'ease',
