@@ -997,7 +997,7 @@ button:focus{
 
 .work {
     margin: 5rem 0 10rem;
-    height: 100%;
+/*     height: 100%; */
     overflow-x: hidden;
 }
 
