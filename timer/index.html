@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRAFT Hospital Timer</title>
+    <title></title>
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,13 +12,13 @@
 
 <body>
     <div class="title">
-        <h1>CRAFT Hospital</h1>
+        <h1></h1>
     </div>
 
     <div class="main-wrapper">
         <div class="timer-section-wrapper">
             <div class="timer-section">
-                <h1>Set your timer!</h1>
+                <h1>Timer!</h1>
                 <!-- <div class="timer-form">
                     <form action="">
                         <input type="text" value="00:00:00">
@@ -57,7 +57,7 @@
         </div>
         <div class="input-section-wrapper">
             <div class="input-section">
-                <h1>Enter Details</h1>
+                <h1></h1>
             </div>
             <div class="input-form">
                 <form id="detailForm" action="">
@@ -70,7 +70,7 @@
                     <input type="text" placeholder="Anaesthetist">
                     <input type="text" placeholder="Blood Group" required>
                     <input type="text" placeholder="Hemoglobin">
-                    <input type="text" placeholder="Allergies">
+                    <input type="text" placeholder="History">
                     <div class="form-btns">
                         <button id="form-submit-btn" onclick="formDisable()">Submit</button>
                         <button id="form-edit-btn" onclick="formEdit()" style="display: none;">Edit</button>
@@ -79,7 +79,11 @@
             </div>
         </div>
     </div>
-
+<script type="text/javascript">
+    window.onbeforeunload = function() {
+        return "Dude, are you sure you want to leave? Think of the kittens!";
+    }
+</script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
