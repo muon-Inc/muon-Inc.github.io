@@ -17,7 +17,11 @@ setInterval(function () {
     var hh = today.getHours()
     var min = today.getMinutes()
     var sec = today.getSeconds()
-
+    var ampm = hh >= 12 ? 'PM' : 'AM';
+            
+    hh = hh % 12;
+    hh = hh ? hh : 12;
+            
     if (hh < 10) {
         hh = '0' + hh;
     }
@@ -30,11 +34,12 @@ setInterval(function () {
         sec = '0' + sec;
     }
 
-    var time = hh + ":" + min + ":" + sec;
+    var time = hh + ":" + min + ":" + sec + ' '+ ampm ;
 
     document.getElementById("currentTime").innerHTML = time;
     document.getElementById("currentDate").innerHTML = date;
 }, 100);
+
 
 $(document).ready(function () {
 
