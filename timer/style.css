@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #54F299;
+}
+
+
+.title {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem;
+    margin: 2rem 0;
+}
+
+.timer-section-wrapper {
+    width: 50%;
+    /* padding: 0 1rem; */
+    order: 1;
+}
+
+.timer-section-wrapper h1 {
+    text-align: center;
+}
+
+.currentDateTimeWrapper {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.currentDateTimeWrapper h3 {
+    margin-bottom: 0.2rem;
+}
+
+.currentDateTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.currentDateTime p {
+    font-size: 1.6rem;
+}
+
+.currentDateTime #currentDate {
+    margin-right: 1rem;
+}
+
+.timer-form-two {
+    margin-top: 2rem;
+}
+
+.timer-form-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+}
+
+.colon {
+    font-size: 5rem;
+    padding-left: 1rem;
+}
+
+.timer-form-two form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px black solid;
+    padding: 0 0.5rem 0.5rem;
+    width: 110px;
+    margin-left: 1rem;
+    font-size: 5rem;
+}
+
+.timer-btns {
+    margin-top: 1rem;
+}
+
+.timer-form-two .timer-btns input {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.3rem 0;
+    cursor: pointer;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+
+input[type=button]:focus {
+    outline: none;
+    background-color: rgb(221, 221, 221);
+}
+
+.input-section-wrapper {
+    width: 50%;
+    order: 2;
+}
+
+.input-section-wrapper h1 {
+    text-align: center;
+}
+
+.input-form {
+    margin-top: 2rem;
+}
+
+.input-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-form form input {
+    background-color: none;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    font-size: 1rem;
+}
+
+.form-btns {
+    display: flex;
+}
+
+.input-form form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 977px) {
+    .colon {
+        font-size: 4rem;
+        padding-left: 1rem;
+    }
+
+    .timer-form-two form input {
+        width: 90px;
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 845px) {
+    .colon {
+        font-size: 4rem;
+        padding-left: 1rem;
+    }
+
+    .timer-form-two form input {
+        width: 80px;
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 785px) {
+    .colon {
+        font-size: 3rem;
+        padding-left: 1rem;
+    }
+
+    .timer-form-two form input {
+        width: 80px;
+        font-size: 3rem;
+        margin-left: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .timer-section-wrapper {
+        width: 100%;
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .input-section-wrapper {
+        width: 100%;
+        order: 1;
+    }
+
+    .input-form form input {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main-wrapper {
+        padding: 0 1rem;
+    }
+
+    .input-form form input {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 363px) {
+    .colon {
+        font-size: 2.5rem;
+        padding-left: 1rem;
+    }
+
+    .timer-form-two form input {
+        width: 60px;
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+    }
+}

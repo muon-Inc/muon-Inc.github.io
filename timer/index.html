@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAFT Hospital Timer</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <h1>CRAFT Hospital</h1>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="timer-section-wrapper">
+            <div class="timer-section">
+                <h1>Set your timer!</h1>
+                <!-- <div class="timer-form">
+                    <form action="">
+                        <input type="text" value="00:00:00">
+                        <div class="timer-btns">
+                            <input id="start" type="button" value="Start" />
+                            <input id="reset" type="button" value="Reset" />
+                        </div>
+                    </form>
+                </div> -->
+                <div class="currentDateTimeWrapper">
+                    <h3>Current Date & Time</h3>
+                    <div class="currentDateTime">
+                        <p id="currentDate"></p>
+                        <p id="currentTime"></p>
+                    </div>
+                </div>
+                <div class="timer-form-two">
+                    <form action="">
+                        <input id="hour" type="text" value="00">
+                        <span class="colon">:</span>
+                        <input id="min" type="text" value="00">
+                        <span class="colon">:</span>
+                        <input id="sec" type="text" value="00">
+                    </form>
+                    <p id="tim"></p>
+                    <div class="timer-btns">
+                        <!-- <input id="myDate" type="date"> -->
+                        <!-- <div id="clockdiv"></div> -->
+                        <input id="start" type="button" value="Start"
+                            onclick="window.initializeClock('clockdiv' ,'hour', 'min' ,'sec', 'myDate')" />
+                        <input id="pause" type="button" value="Pause" />
+                        <input id="reset" type="button" value="Reset" onclick="resetTimer()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-section-wrapper">
+            <div class="input-section">
+                <h1>Enter Details</h1>
+            </div>
+            <div class="input-form">
+                <form id="detailForm" action="">
+                    <input type="text" placeholder="Patient Name" required>
+                    <input type="text" placeholder="Sex" required>
+                    <input type="text" placeholder="Age" required>
+                    <input type="text" placeholder="Hospital ID" required>
+                    <input type="text" placeholder="Procedure">
+                    <input type="text" placeholder="Surgeon">
+                    <input type="text" placeholder="Anaesthetist">
+                    <input type="text" placeholder="Blood Group" required>
+                    <input type="text" placeholder="Hemoglobin">
+                    <input type="text" placeholder="Allergies">
+                    <div class="form-btns">
+                        <button id="form-submit-btn" onclick="formDisable()">Submit</button>
+                        <button id="form-edit-btn" onclick="formEdit()" style="display: none;">Edit</button>
+                </form>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
