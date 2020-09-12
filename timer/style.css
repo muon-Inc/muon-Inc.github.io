@@ -8,7 +8,7 @@ body {
     font-family: 'poppins', sans-serif;
     height: 100%;
     width: 100%;
-    background-color: #54F299;
+    background-color: #DBE7ED;
 }
 
 
@@ -45,6 +45,7 @@ body {
 
 .currentDateTimeWrapper h3 {
     margin-bottom: 0.2rem;
+    font-size: 2rem;
 }
 
 .currentDateTime {
@@ -55,11 +56,59 @@ body {
 }
 
 .currentDateTime p {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
 }
 
 .currentDateTime #currentDate {
     margin-right: 1rem;
+}
+
+.controls {
+    /* position: fixed; */
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.button {
+    color: #000;
+    font-size: 1.8vw;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+.button:first-child {
+    margin-left: 0;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+.button:hover {
+    color: white;
+}
+
+.stopwatch {
+    font-size: 8vw;
+    text-align: center;
+}
+
+.results {
+    border-color: lime;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* font-size: 1rem; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+
+.results li {
+    font-size: 1.4rem;
 }
 
 .timer-form-two {
@@ -98,6 +147,20 @@ body {
     margin: 1rem 0.3rem 0;
     cursor: pointer;
 }
+
+/* input::placeholder {
+    color: #000;
+} */
+
+input[type="text"]:disabled {
+    background: rgb(238, 238, 238);
+    color: #000;
+    font-weight: 700;
+}
+
+/* input[type="text"]:disabled {
+    background: rgb(238, 238, 238);
+} */
 
 input[type=text]:focus {
     outline: none;
@@ -140,6 +203,7 @@ input[type=button]:focus {
 
 .form-btns {
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .input-form form button {

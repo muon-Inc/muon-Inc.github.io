@@ -1,2 +1,2 @@
-# craft-hospital-timer
-CRAFT Hospital Timer with patient details input field
+# Timer-project
+Timer Project for CRAFT Hospitals by Muon
