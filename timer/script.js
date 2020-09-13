@@ -4,7 +4,6 @@ var elem = document.documentElement;
 function openFullScreen() {
   var icon = document.getElementById("icon");
   document.getElementById("form-submit-btn").style.display = "none";
-  document.getElementById(“form-edit-btn”).style.display = “none”;
   if (icon.classList.contains("fa-expand-alt")) {
     icon.classList.remove("fa-expand-alt");
     icon.classList.add("fa-compress-alt");
