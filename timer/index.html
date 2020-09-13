@@ -1,82 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRAFT Hospital Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fe06f24a1a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRAFT Hospital Timer</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/fe06f24a1a.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <!-- Full Screen Button -->
+    <button id="fullscreen-btn" onclick="openFullScreen()">
+      <i id="icon" class="fas fa-expand-alt"></i>
+    </button>
 
-<body>
-  <!-- Full Screen Button -->
-  <button id="fullscreen-btn" onclick="openFullScreen()"><i id="icon" class="fas fa-expand-alt"></i></button>
-
-  <!-- The whole content wrapper div -->
-  <div class="main-wrapper">
-    <!-- timer section wrapper div -->
-    <div class="timer-section-wrapper">
-      <div class="timer-section">
-        <!-- Current Date and Time Display -->
-        <div class="currentDateTimeWrapper">
-          <h3>Current Date & Time</h3>
-          <div class="currentDateTime">
-            <p id="currentDate"></p>
-            <p id="currentTime"></p>
+    <!-- The whole content wrapper div -->
+    <div class="main-wrapper">
+      <!-- timer section wrapper div -->
+      <div class="timer-section-wrapper">
+        <div class="timer-section">
+          <!-- Current Date and Time Display -->
+          <div class="currentDateTimeWrapper">
+            <h3>Current Date & Time</h3>
+            <div class="currentDateTime">
+              <p id="currentDate"></p>
+              <p id="currentTime"></p>
+              <canvas
+                id="canvas"
+                width="250"
+                height="250"
+                style="background-color: transparent"
+              >
+              </canvas>
+            </div>
           </div>
-        </div>
 
-        <!-- Stopwatch Controls -->
-        <nav class="controls">
-          <a href="#" class="button" onClick="stopwatch.start();">Start</a>
-          <a href="#" class="button" onClick="stopwatch.lap();">Lap</a>
-          <a href="#" class="button" onClick="stopwatch.stop();">Stop</a>
-          <a href="#" class="button" onClick="stopwatch.restart();">Restart</a>
-          <a href="#" class="button" onClick="stopwatch.clear();">Clear Laps</a>
-        </nav>
-        <!-- Stopwatch time display -->
-        <div class="stopwatch"></div>
-        <!-- To display the laps -->
-        <ul class="results"></ul>
-        <!-- Baby detaisl form -->
-        <form>
+          <!-- Stopwatch Controls -->
+          <nav class="controls">
+            <a href="#" class="button" onClick="stopwatch.start();">Start</a>
+            <a href="#" class="button" onClick="stopwatch.lap();">Lap</a>
+            <a href="#" class="button" onClick="stopwatch.stop();">Stop</a>
+            <a href="#" class="button" onClick="stopwatch.restart();"
+              >Restart</a
+            >
+            <a href="#" class="button" onClick="stopwatch.clear();"
+              >Clear Laps</a
+            >
+          </nav>
+          <!-- Stopwatch time display -->
+          <div class="stopwatch"></div>
+          <!-- To display the laps -->
+          <ul class="results"></ul>
+          <!-- Baby detaisl form -->
+          <!-- <form>
           <input type="text" placeholder="Baby Weight" />
           <input type="text" placeholder="Baby Sex" />
-        </form>
+        </form> -->
+        </div>
+      </div>
+      <div class="input-section-wrapper">
+        <div class="input-form">
+          <form id="detailForm" action="">
+            <input
+              class="inputfield"
+              type="text"
+              placeholder="Patient Name"
+              required
+            />
+            <input class="inputfield" type="text" placeholder="Sex" required />
+            <input class="inputfield" type="text" placeholder="Age" required />
+            <input
+              class="inputfield"
+              type="text"
+              placeholder="Hospital ID"
+              required
+            />
+            <input class="inputfield" type="text" placeholder="Procedure" />
+            <input class="inputfield" type="text" placeholder="Surgeon" />
+            <input class="inputfield" type="text" placeholder="Anaesthetist" />
+            <input
+              class="inputfield"
+              type="text"
+              placeholder="Blood Group"
+              required
+            />
+            <input class="inputfield" type="text" placeholder="Hemoglobin" />
+            <input class="inputfield" type="text" placeholder="Details" />
+            <div class="form-btns">
+              <button id="form-submit-btn" onclick="formDisable()">
+                Submit
+              </button>
+              <button
+                id="form-edit-btn"
+                onclick="formEdit()"
+                style="display: none"
+              >
+                Edit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="input-section-wrapper">
-      <div class="input-form">
-        <form id="detailForm" action="">
-          <input class="inputfield" type="text" placeholder="Patient Name" required />
-          <input class="inputfield" type="text" placeholder="Sex" required />
-          <input class="inputfield" type="text" placeholder="Age" required />
-          <input class="inputfield" type="text" placeholder="Hospital ID" required />
-          <input class="inputfield" type="text" placeholder="Procedure" />
-          <input class="inputfield" type="text" placeholder="Surgeon" />
-          <input class="inputfield" type="text" placeholder="Anaesthetist" />
-          <input class="inputfield" type="text" placeholder="Blood Group" required />
-          <input class="inputfield" type="text" placeholder="Hemoglobin" />
-          <input class="inputfield" type="text" placeholder="Details" />
-          <div class="form-btns">
-            <button id="form-submit-btn" onclick="formDisable()">
-              Submit
-            </button>
-            <button id="form-edit-btn" onclick="formEdit()" style="display: none">
-              Edit
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-    crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
