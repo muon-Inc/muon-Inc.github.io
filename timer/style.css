@@ -11,9 +11,24 @@ body {
   background-color: #dbe7ed;
 }
 
-.title {
-  text-align: center;
-  margin: 1.5rem;
+/* Fullscreen btn */
+#fullscreen-btn {
+  background-color: #96cdeb;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 1rem;
+  left: 2rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+#fullscreen-btn i {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .main-wrapper {
@@ -21,17 +36,12 @@ body {
   display: flex;
   flex-direction: row;
   padding: 0 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .timer-section-wrapper {
   width: 50%;
-  /* padding: 0 1rem; */
   order: 1;
-}
-
-.timer-section-wrapper h1 {
-  text-align: center;
 }
 
 .currentDateTimeWrapper {
@@ -62,7 +72,6 @@ body {
 }
 
 .controls {
-  /* position: fixed; */
   text-align: center;
   width: 100%;
   margin-top: 3rem;
@@ -98,11 +107,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  /* font-size: 1rem; */
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
 }
 
 .results li {
@@ -126,56 +130,11 @@ body {
   font-size: 1rem;
 }
 
-.timer-form-two {
-  margin-top: 2rem;
-}
-
-.timer-form-two {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* width: 100%; */
-}
-
-.colon {
-  font-size: 5rem;
-  padding-left: 1rem;
-}
-
-.timer-form-two form input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px black solid;
-  padding: 0 0.5rem 0.5rem;
-  width: 110px;
-  margin-left: 1rem;
-  font-size: 5rem;
-}
-
-.timer-btns {
-  margin-top: 1rem;
-}
-
-.timer-form-two .timer-btns input {
-  padding: 0.5rem 1rem;
-  margin: 1rem 0.3rem 0;
-  cursor: pointer;
-}
-
-/* input::placeholder {
-    color: #000;
-} */
-
 input[type="text"]:disabled {
   background: rgb(256, 256, 256);
   color: #000;
   font-weight: 700;
 }
-
-/* input[type="text"]:disabled {
-    background: rgb(238, 238, 238);
-} */
 
 input[type="text"]:focus {
   outline: none;
@@ -193,10 +152,6 @@ input[type="button"]:focus {
 
 .input-section-wrapper h1 {
   text-align: center;
-}
-
-.input-form {
-  margin-top: 2rem;
 }
 
 .input-form form {
@@ -259,19 +214,6 @@ input[type="button"]:focus {
     width: 90%;
   }
 }
-
-/* @media only screen and (max-width: 363px) {
-    .colon {
-        font-size: 2.5rem;
-        padding-left: 1rem;
-    }
-
-    .timer-form-two form input {
-        width: 60px;
-        font-size: 2.5rem;
-        margin-left: 0.5rem;
-    }
-} */
 
 @media only screen and (max-width: 375px) {
   .currentDateTimeWrapper h3 {

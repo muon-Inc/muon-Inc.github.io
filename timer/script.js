@@ -1,3 +1,44 @@
+// Full screen script
+var elem = document.documentElement;
+
+function openFullScreen() {
+  var icon = document.getElementById("icon");
+  if (icon.classList.contains("fa-expand-alt")) {
+    icon.classList.remove("fa-expand-alt");
+    icon.classList.add("fa-compress-alt");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      /* Chrome, Safari & Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  } else if (icon.classList.contains("fa-compress-alt")) {
+    icon.classList.remove("fa-compress-alt");
+    icon.classList.add("fa-expand-alt");
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      /* Firefox */
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      /* Chrome, Safari and Opera */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      /* IE/Edge */
+      document.msExitFullscreen();
+    }
+  }
+
+}
+// 
+
+// Get real time 
 setInterval(function () {
   var today = new Date();
   var dd = today.getDate();
@@ -40,6 +81,8 @@ setInterval(function () {
   document.getElementById("currentDate").innerHTML = date;
 }, 100);
 
+
+// Form Disable
 $(document).ready(function () {
   $("#form-submit-btn").click(function (e) {
     e.preventDefault();
@@ -55,6 +98,8 @@ $(document).ready(function () {
   });
 });
 
+
+// 
 // holds time values
 let seconds = 0;
 let minutes = 0;
@@ -70,54 +115,6 @@ let interval = null;
 let status = "stopped";
 
 // Stopwatch function
-function stopWatch() {
-  seconds++;
-  if (seconds / 60 === 1) {
-    seconds = 0;
-    minutes++;
-
-    if (minutes / 60 === 1) {
-      minutes = 0;
-      hours++;
-    }
-  }
-
-  if (seconds < 10) {
-    displaySeconds = "0" + seconds.toString();
-  } else {
-    displaySeconds = seconds;
-  }
-
-  if (minutes < 10) {
-    displayMinutes = "0" + minutes.toString();
-  } else {
-    displayMinutes = minutes;
-  }
-
-  if (hours < 10) {
-    displayHours = "0" + hours.toString();
-  } else {
-    displayHours = hours;
-  }
-
-  // Display updated time values to user
-  document.getElementById("display").innerHTML =
-    displayHours + ":" + displayMinutes + ":" + displaySeconds;
-}
-
-function startStop() {
-  if (status === "stopped") {
-    // Starts the stopwatch by calling the setInterval
-    interval = window.setInterval(stopWatch, 1000);
-    document.getElementById("startStop").innerHTML = "Stop";
-    status = "started";
-  } else {
-    window.clearInterval(interval);
-    document.getElementById("startStop").innerHTML = "Start";
-    status = "stopped";
-  }
-}
-
 class Stopwatch {
   constructor(display, results) {
     this.running = false;
